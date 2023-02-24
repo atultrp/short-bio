@@ -46,13 +46,13 @@ const dashboard = () => {
             { required: true })}
           type="text" placeholder='Name' name='name' onChange={(e) => handleNameChange(e)} />
 
-        {/* <input className='py-3 px-3 border border-rose-500 rounded-md md:w-1/3 mx-2'
+        <input className='py-3 px-3 border border-rose-500 rounded-md md:w-1/3 mx-2'
           {...register("profession",
             { required: reqBool })}
-          type="text" placeholder='Profession' name='profession' /> */}
+          type="text" placeholder='Profession' name='profession' />
 
       </div>
-      {/* <div className='space-y-2'>
+      <div className='space-y-2'>
 
         <input className='py-3 px-3 border border-rose-500 rounded-md md:w-1/3 mx-2'
           {...register("origin",
@@ -64,13 +64,13 @@ const dashboard = () => {
             { required: reqBool })}
           type="text" placeholder='Image' name='image' />
 
-      </div> */}
+      </div>
       <div className='space-y-2'>
 
-        {/* <textarea className='py-3 px-3 border border-rose-500 rounded-md md:w-1/3 mx-2'
+        <textarea className='py-3 px-3 border border-rose-500 rounded-md md:w-1/3 mx-2'
           {...register("bio",
             { required: reqBool })}
-          name="bio" placeholder='Short Bio' rows="10"></textarea> */}
+          name="bio" placeholder='Short Bio' rows="10"></textarea>
 
         <textarea className='py-3 px-3 border border-rose-500 rounded-md md:w-1/3 mx-2'
           {...register("briefBio",
