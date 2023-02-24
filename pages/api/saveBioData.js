@@ -23,6 +23,8 @@ export default (req, res) => {
           item.origin = req.body.origin
         }
         if (req.body.briefBio) {
+          let briefBio = req.body.briefBio
+          
           item.briefBio = req.body.briefBio
         }
       }

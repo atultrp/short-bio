@@ -8,7 +8,6 @@ const dashboard = () => {
   const tempDataName = data.map((item) => item.name.toLowerCase());
   const [reqBool, setReqBool] = useState(true);
   const [errorToast, setErrorToast] = useState(true);
-  console.log(tempDataName)
 
   const handleNameChange = (e) => {
     if (tempDataName.includes(e.target.value.toLowerCase())) {
@@ -19,7 +18,6 @@ const dashboard = () => {
   }
 
   const onSubmit = (data) => {
-    console.log(data, errors, errorToast)
     data && fetch("/api/saveBioData", {
       method: "POST",
       headers: {
@@ -36,8 +34,6 @@ const dashboard = () => {
     setTimeout(() => {
       setErrorToast(false)
     }, 3000)
-
-    console.log(errors, errorToast)
   }, [errors])
 
 
@@ -50,13 +46,13 @@ const dashboard = () => {
             { required: true })}
           type="text" placeholder='Name' name='name' onChange={(e) => handleNameChange(e)} />
 
-        <input className='py-3 px-3 border border-rose-500 rounded-md md:w-1/3 mx-2'
+        {/* <input className='py-3 px-3 border border-rose-500 rounded-md md:w-1/3 mx-2'
           {...register("profession",
             { required: reqBool })}
-          type="text" placeholder='Profession' name='profession' />
+          type="text" placeholder='Profession' name='profession' /> */}
 
       </div>
-      <div className='space-y-2'>
+      {/* <div className='space-y-2'>
 
         <input className='py-3 px-3 border border-rose-500 rounded-md md:w-1/3 mx-2'
           {...register("origin",
@@ -68,13 +64,13 @@ const dashboard = () => {
             { required: reqBool })}
           type="text" placeholder='Image' name='image' />
 
-      </div>
+      </div> */}
       <div className='space-y-2'>
 
-        <textarea className='py-3 px-3 border border-rose-500 rounded-md md:w-1/3 mx-2'
+        {/* <textarea className='py-3 px-3 border border-rose-500 rounded-md md:w-1/3 mx-2'
           {...register("bio",
             { required: reqBool })}
-          name="bio" placeholder='Short Bio' rows="10"></textarea>
+          name="bio" placeholder='Short Bio' rows="10"></textarea> */}
 
         <textarea className='py-3 px-3 border border-rose-500 rounded-md md:w-1/3 mx-2'
           {...register("briefBio",
