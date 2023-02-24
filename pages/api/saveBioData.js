@@ -3,9 +3,10 @@ import data from "../../data/bioData.json";
 
 export default (req, res) => {
 
+  // Get the name data from the request body
   const tempDataName = data.map((item) => item.name);
-  console.log(req.body, "HEYA LIFE")
 
+  // Check if the name already exists in the data file then update the data
   if (tempDataName.includes(req.body.name)) {
     data?.map((item) => {
       if (item.name === req.body.name) {
@@ -26,7 +27,9 @@ export default (req, res) => {
         }
       }
     })
-  } else {
+  }
+  // Else add the new data
+  else {
     const newData = {
       "name": req.body.name,
       "bio": req.body.bio,
@@ -39,12 +42,9 @@ export default (req, res) => {
     data.push(newData)
   }
 
-
-
+  // Write the data to the file
   fs.writeFileSync("data/bioData.json", Buffer.from(JSON.stringify(data)).toString());
 
-  console.log("data", data)
-  // res.status(200).json({ message: data });
+  // Return the response
   res.status(200).json({ message: "Bio added successfully." });
-
 };
