@@ -4,12 +4,12 @@ import data from "../../data/bioData.json";
 export default (req, res) => {
 
   // Get the name data from the request body
-  const tempDataName = data.map((item) => item.name);
+  const tempDataName = data.map((item) => item.name.toLowerCase());
 
   // Check if the name already exists in the data file then update the data
-  if (tempDataName.includes(req.body.name)) {
+  if (tempDataName.includes(req.body.name.toLowerCase())) {
     data?.map((item) => {
-      if (item.name === req.body.name) {
+      if (item.name.toLowerCase() === req.body.name.toLowerCase()) {
         if (req.body.bio) {
           item.bio = req.body.bio
         }

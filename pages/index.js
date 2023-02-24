@@ -31,19 +31,25 @@ export default function Home() {
       </Head>
 
 
-      <div className="mt-3 md:mt-6 mx-8 md:mx-16">
+      <div className="mt-3 md:mt-6 mx-6 md:mx-16">
 
-        <img src="images/upperPagePoster.svg" alt="poster" className='w-96 md:w-[420px] mx-auto' />
-        <h2 className="custom-font font-bold uppercase text-4xl md:text-6xl md:w-1/2 mx-8 md:mx-auto leading-snug text-center tracking-wide text-transparent bg-clip-text bg-gradient-to-tr from-teal-400 via-violet-500 to-teal-400">Short Bios of Inspirational Personalities.</h2>
-        <p className="md:w-1/2 text-base md:text-xl mx-8 md:mx-auto text-center leading-normal mt-4">
-          Welcome to our website featuring short bios of inspirational personalities. Discover the stories of some of the most famous and influential individuals in history and be inspired by their remarkable achievements.
-        </p>
+        <div className='md:flex flex-row-reverse items-center md:gap-x-7'>
+          <img src="/elonMusk.png" alt="poster" className='w-80 h-80 md:w-[520px] md:h-[520px] flex-shrink-0 object-cover object-center rounded-full mx-auto' />
+          <div className='mt-3 md:mt-0'>
+            <h2 className="custom-font font-bold uppercase text-4xl md:text-6xl mx-8 md:mx-auto leading-snug text-left tracking-wide text-transparent bg-clip-text bg-gradient-to-tr from-teal-400 via-violet-500 to-teal-400">Short Bios of Famous Personalities.</h2>
+            <p className="text-sm md:text-lg mx-8 md:mx-auto text-left leading-normal mt-4">
+              Welcome to our website featuring short bios of inspirational personalities. Discover the stories of some of the most famous and influential individuals in history and be inspired by their remarkable achievements.
+            </p>
 
-        <div className="flex space-x-6 justify-center my-8">
-          <button className="text-[#1b1b1b] bg-white px-6 py-2 rounded-full font-bold hover:text-white border-2 hover:duration-300 hover:border-white uppercase flex space-x-2 items-center hover:bg-gradient-to-t hover:from-rose-500 hover:to-pink-400 hover:scale-110 hover:ease-in-out">
-            <BiNotepad className="text-xl" />
-            <span>Explore</span>
-          </button>
+            <div className="mt-8">
+              <button className="text-[#1b1b1b] bg-white px-6 py-2 rounded-full font-bold hover:text-white border-2 hover:duration-300 hover:border-white uppercase flex space-x-2 items-center hover:bg-gradient-to-t hover:from-rose-500 hover:to-pink-400 hover:scale-110 hover:ease-in-out">
+                <BiNotepad className="text-xl" />
+                <span>Explore</span>
+              </button>
+            </div>
+          </div>
+
+
         </div>
 
         {/* Quotes */}
@@ -59,7 +65,7 @@ export default function Home() {
 
         {/* BIO Cards */}
         <div>
-          <h2 className="custom-font uppercase text-2xl md:text-4xl font-semibold bg-gradient-to-t from-rose-500 to-pink-400 text-transparent bg-clip-text">Short Bio of Famous Personalities</h2>
+          <h2 className="custom-font uppercase text-2xl md:text-4xl font-semibold bg-gradient-to-t from-rose-500 to-pink-400 text-transparent bg-clip-text">Short Bios of Famous Personalities</h2>
           <p className=''>Welcome to our website celebrating the lives of famous and influential people. Explore our collection of short biographies, from Steve Jobs to Nelson Mandela, and be inspired by their legacies. Discover the stories of some of the world's most remarkable individuals and find motivation in their achievements.</p>
           <div className='my-4 flex flex-wrap'>
             {data.map((item, index) => {

@@ -5,12 +5,13 @@ import data from '../data/bioData.json'
 const dashboard = () => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
-  const tempDataName = data.map((item) => item.name);
+  const tempDataName = data.map((item) => item.name.toLowerCase());
   const [reqBool, setReqBool] = useState(true);
   const [errorToast, setErrorToast] = useState(true);
+  console.log(tempDataName)
 
   const handleNameChange = (e) => {
-    if (tempDataName.includes(e.target.value)) {
+    if (tempDataName.includes(e.target.value.toLowerCase())) {
       setReqBool(false);
     } else {
       setReqBool(true);
