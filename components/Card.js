@@ -52,22 +52,22 @@ const Card = ({ data }) => {
           <img
             alt="img"
             src={data?.image}
-            className="w-28 h-28 rounded-full flex-shrink-0 object-cover object-center " />
+            className="w-24 h-24 md:w-28 md:h-28 rounded-full flex-shrink-0 object-cover object-center " />
           <div className="flex flex-col ml-5 space-y-1 text-right">
-            <span className="title-font font-medium text-gray-900 tracking-widest uppercase">{data?.name}</span>
+            <span className="title-font font-medium text-gray-900 tracking-widest uppercase text-sm md:text-base">{data?.name}</span>
             <div className="mr-0 ml-auto w-fit text-xs font-medium tracking-widest uppercase">{data?.profession}</div>
             <span className="text-gray-400 text-xs tracking-widest mt-0.5">({data?.origin})</span>
           </div>
         </div>
         <div className='mt-3'>
-          <p className="leading-relaxed mb-8 line-clamp-3">{data?.bio}</p>
+          <p className="leading-relaxed mb-8 line-clamp-3 text-sm md:text-base">{data?.bio}</p>
 
         </div>
       </div>
 
       {/* Bottom part */}
       <div className="flex justify-between items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full">
-        <a onClick={() => handleReadMoreClick(data?.id)} className="text-blue-500 inline-flex items-center cursor-pointer hover:animate-bounce">Read More
+        <a onClick={() => handleReadMoreClick(data?.id)} className="text-blue-500 inline-flex items-center cursor-pointer hover:animate-bounce text-sm md:text-base">Read More
           <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5 12h14"></path>
             <path d="M12 5l7 7-7 7"></path>
