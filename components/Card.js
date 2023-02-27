@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { FcLike, FcLikePlaceholder } from 'react-icons/fc'
 import { BsWhatsapp } from 'react-icons/bs'
 import { TiSocialTwitter } from 'react-icons/ti'
 import {
@@ -15,7 +14,6 @@ const Card = ({ data }) => {
 
   const handleReadMoreClick = (id) => {
     router.push(`/fullBio/?id=${id}`)
-    console.log(id)
   }
 
   useEffect(() => {

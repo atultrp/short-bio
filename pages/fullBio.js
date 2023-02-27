@@ -19,9 +19,7 @@ const fullBio = () => {
 
   useEffect(() => {
     let tempData = data.filter((item) => item.id === parseInt(id))
-    console.log("tempData", tempData)
     setBioData(tempData[0])
-    console.log("bioData", tempData[0]?.briefBio.split("\n\n"))
     setBriefBioContent(tempData[0]?.briefBio.split("\n\n"))
     setShareUrl(window.location.href)
   }, [id])
