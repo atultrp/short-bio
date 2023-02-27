@@ -4,7 +4,6 @@ import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import data from '../data/bioData.json'
 import Link from 'next/link'
-import { FaPenNib } from 'react-icons/fa'
 import { BiNotepad } from 'react-icons/bi'
 
 export default function Home() {
@@ -42,10 +41,12 @@ export default function Home() {
             </p>
 
             <div className="mt-8">
-              <button className="text-[#1b1b1b] mx-auto lg:mx-0 bg-white px-6 py-2 rounded-full font-bold hover:text-white border-2 hover:duration-300 hover:border-white uppercase flex space-x-2 items-center hover:bg-gradient-to-t hover:from-rose-500 hover:to-pink-400 hover:scale-110 hover:ease-in-out">
-                <BiNotepad className="text-xl" />
-                <span>Explore</span>
-              </button>
+              <a href="#bioSection" className='w-fit'>
+                <button className="text-[#1b1b1b] mx-auto lg:mx-0 bg-white px-6 py-2 rounded-full font-bold hover:text-white border-2 hover:duration-300 hover:border-white uppercase flex space-x-2 items-center hover:bg-gradient-to-t hover:from-rose-500 hover:to-pink-400 hover:scale-110 hover:ease-in-out">
+                  <BiNotepad className="text-xl" />
+                  <span>Explore</span>
+                </button>
+              </a>
             </div>
           </div>
 
@@ -64,7 +65,7 @@ export default function Home() {
         </div>
 
         {/* BIO Cards */}
-        <div>
+        <div id='bioSection'>
           <h2 className="custom-font uppercase text-2xl md:text-4xl font-semibold bg-gradient-to-t from-rose-500 to-pink-400 text-transparent bg-clip-text">Short Bios of Famous Personalities</h2>
           <p className=''>Welcome to our website celebrating the lives of famous and influential people. Explore our collection of short biographies, from Steve Jobs to Nelson Mandela, and be inspired by their legacies. Discover the stories of some of the world's most remarkable individuals and find motivation in their achievements.</p>
           <div className='my-4 flex flex-wrap'>
