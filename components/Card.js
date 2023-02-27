@@ -24,7 +24,7 @@ const Card = ({ data }) => {
   }
 
   const handleReadMoreClick = (id) => {
-    // router.push(`/fullBlog/?id=${id}`)
+    router.push(`/fullBio/?id=${id}`)
     console.log(id)
   }
 
@@ -56,10 +56,6 @@ const Card = ({ data }) => {
             <path d="M12 5l7 7-7 7"></path>
           </svg>
         </a>
-        {/* <span className="text-gray-400 mr-3 inline-flex items-center ml-auto leading-none text-sm pr-3 py-1">
-          {likeState ? <FcLike className='text-2xl cursor-pointer' onClick={handleLikeClick} /> : <FcLikePlaceholder className='text-2xl cursor-pointer' onClick={handleUnlikeClick} />}
-          <span className='ml-1'>{likeCount}</span>
-        </span> */}
         <div className='flex items-center'>
           <WhatsappShareButton
             url={'https://blog-like-star.vercel.app'} >

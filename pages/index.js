@@ -7,7 +7,6 @@ import Link from 'next/link'
 import { BiNotepad } from 'react-icons/bi'
 
 export default function Home() {
-  console.log(data)
   const [quotesData, setQuotesData] = useState([])
 
   useEffect(() => {
