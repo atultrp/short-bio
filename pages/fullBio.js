@@ -13,6 +13,7 @@ const fullBio = () => {
 
   const [bioData, setBioData] = useState()
   const [briefBioContent, setBriefBioContent] = useState()
+  const [shareUrl, setShareUrl] = useState("")
   const router = useRouter();
   const id = router.query.id
 
@@ -22,7 +23,7 @@ const fullBio = () => {
     setBioData(tempData[0])
     console.log("bioData", tempData[0]?.briefBio.split("\n\n"))
     setBriefBioContent(tempData[0]?.briefBio.split("\n\n"))
-
+    setShareUrl(window.location.href)
   }, [id])
 
 
@@ -38,11 +39,11 @@ const fullBio = () => {
             <span className="text-gray-400 text-xs tracking-widest mt-0.5 mr-0 ml-auto sm:ml-0">({bioData?.origin})</span>
             <div className="flex sm:hidden items-center mt-3 w-full justify-end ">
               <WhatsappShareButton
-                url={'https://blog-like-star.vercel.app'} >
+                url={shareUrl} >
                 <BsWhatsapp className='text-2xl text-green-500 mr-4 hover:scale-125 ease-in-out duration-200' />
               </WhatsappShareButton>
               <TwitterShareButton
-                url={'https://blog-like-star.vercel.app'} >
+                url={shareUrl} >
                 <TiSocialTwitter className='text-4xl text-rose-400 hover:scale-125 ease-in-out duration-200' />
               </TwitterShareButton>
             </div>
@@ -53,11 +54,11 @@ const fullBio = () => {
           {/* Share */}
           <div className="flex items-center flex-wrap mt-auto w-full justify-end">
             <WhatsappShareButton
-              url={'https://blog-like-star.vercel.app'} >
+              url={shareUrl} >
               <BsWhatsapp className='text-2xl text-green-500 mr-4 hover:scale-125 ease-in-out duration-200' />
             </WhatsappShareButton>
             <TwitterShareButton
-              url={'https://blog-like-star.vercel.app'} >
+              url={shareUrl} >
               <TiSocialTwitter className='text-4xl text-rose-400 mr-4 hover:scale-125 ease-in-out duration-200' />
             </TwitterShareButton>
           </div>
