@@ -33,16 +33,16 @@ export default function Home() {
 
       <div className="mt-3 md:mt-6 mx-6 md:mx-16">
 
-        <div className='md:flex flex-row-reverse items-center md:gap-x-7'>
-          <img src="/elonMusk.png" alt="poster" className='w-80 h-80 md:w-[520px] md:h-[520px] flex-shrink-0 object-cover object-center rounded-full mx-auto' />
-          <div className='mt-3 md:mt-0'>
-            <h2 className="custom-font font-bold uppercase text-4xl md:text-6xl mx-8 md:mx-auto leading-snug text-left tracking-wide text-transparent bg-clip-text bg-gradient-to-tr from-teal-400 via-violet-500 to-teal-400">Short Bios of Famous Personalities.</h2>
-            <p className="text-sm md:text-lg mx-8 md:mx-auto text-left leading-normal mt-4">
+        <div className='lg:flex flex-row-reverse items-center lg:gap-x-7'>
+          <img src="/elonMusk.png" alt="poster" className='w-80 h-80 md:w-96 md:h-96 xl:w-[450px] xl:h-[450px] flex-shrink-0 object-cover object-center rounded-full mx-auto' />
+          <div className='mt-3 lg:mt-0'>
+            <h2 className="custom-font font-bold uppercase text-4xl md:text-6xl md:mx-auto leading-snug text-center lg:text-left tracking-wide text-transparent bg-clip-text bg-gradient-to-tr from-teal-400 via-violet-500 to-teal-400">Short Bios of Famous Personalities.</h2>
+            <p className="text-sm md:text-lg md:mx-auto text-center lg:text-left leading-normal mt-4">
               Welcome to our website featuring short bios of inspirational personalities. Discover the stories of some of the most famous and influential individuals in history and be inspired by their remarkable achievements.
             </p>
 
             <div className="mt-8">
-              <button className="text-[#1b1b1b] bg-white px-6 py-2 rounded-full font-bold hover:text-white border-2 hover:duration-300 hover:border-white uppercase flex space-x-2 items-center hover:bg-gradient-to-t hover:from-rose-500 hover:to-pink-400 hover:scale-110 hover:ease-in-out">
+              <button className="text-[#1b1b1b] mx-auto lg:mx-0 bg-white px-6 py-2 rounded-full font-bold hover:text-white border-2 hover:duration-300 hover:border-white uppercase flex space-x-2 items-center hover:bg-gradient-to-t hover:from-rose-500 hover:to-pink-400 hover:scale-110 hover:ease-in-out">
                 <BiNotepad className="text-xl" />
                 <span>Explore</span>
               </button>
