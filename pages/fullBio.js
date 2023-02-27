@@ -12,6 +12,7 @@ import { useRouter } from 'next/router';
 const fullBio = () => {
 
   const [bioData, setBioData] = useState()
+  const [briefBioContent, setBriefBioContent] = useState()
   const router = useRouter();
   const id = router.query.id
 
@@ -19,6 +20,9 @@ const fullBio = () => {
     let tempData = data.filter((item) => item.id === parseInt(id))
     console.log("tempData", tempData)
     setBioData(tempData[0])
+    console.log("bioData", tempData[0]?.briefBio.split("\n\n"))
+    setBriefBioContent(tempData[0]?.briefBio.split("\n\n"))
+
   }, [id])
 
 
@@ -60,9 +64,15 @@ const fullBio = () => {
         </div>
       </div>
 
-      <p className="leading-relaxed mb-8 sm:px-7 mt-3 sm:mt-6">
-        {bioData?.briefBio}
-      </p>
+      <div className='mb-8 sm:px-7 mt-3 sm:mt-6'>
+        {briefBioContent?.map((item, index) => {
+          return (
+            <p className="leading-relaxed mb-2" key={index}>
+              {item}
+            </p>
+          )
+        })}
+      </div>
 
       <div className="cursor-pointer w-fit mx-auto my-6 md:my-12">
         <Link href={"/"}>
