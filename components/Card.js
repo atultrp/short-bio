@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FcLike, FcLikePlaceholder } from 'react-icons/fc'
 import { BsWhatsapp } from 'react-icons/bs'
 import { TiSocialTwitter } from 'react-icons/ti'
@@ -10,23 +10,18 @@ import {
 import { useRouter } from 'next/router';
 
 const Card = ({ data }) => {
-  const [likeState, setLikeState] = useState(false)
-  const [likeCount, setLikeCount] = useState(0)
   const router = useRouter();
-
-  const handleLikeClick = () => {
-    setLikeState(false)
-    setLikeCount(likeCount - 1)
-  }
-  const handleUnlikeClick = () => {
-    setLikeState(true)
-    setLikeCount(likeCount + 1)
-  }
+  const [shareUrl, setShareUrl] = useState("")
 
   const handleReadMoreClick = (id) => {
     router.push(`/fullBio/?id=${id}`)
     console.log(id)
   }
+
+  useEffect(() => {
+    setShareUrl(window.location.host)
+  }, [])
+  
 
   return (
     <div className="px-2 py-4 md:px-6 lg:px-12 md:py-6 my-2 min-w-full md:min-w-0 md:w-1/2 2xl:w-1/3 flex flex-col items-start rounded-2xl hover:shadow-[-10px_-10px_30px_4px_rgba(139,92,246,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)] ease-in-out transition-shadow">
@@ -58,11 +53,11 @@ const Card = ({ data }) => {
         </a>
         <div className='flex items-center'>
           <WhatsappShareButton
-            url={'https://blog-like-star.vercel.app'} >
+            url={shareUrl+"/fullBio?id="+data?.id}>
             <BsWhatsapp className='text-2xl text-green-500 mr-4 hover:scale-125 ease-in-out duration-200' />
           </WhatsappShareButton>
           <TwitterShareButton
-            url={'https://blog-like-star.vercel.app'} >
+            url={shareUrl+"/fullBio?id="+data?.id} >
             <TiSocialTwitter className='text-4xl text-blue-400 mr-4 hover:scale-125 ease-in-out duration-200' />
           </TwitterShareButton>
         </div>
