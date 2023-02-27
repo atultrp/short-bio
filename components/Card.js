@@ -29,24 +29,7 @@ const Card = ({ data }) => {
   }
 
   return (
-    <div className="px-2 py-4 md:px-12 md:py-6 my-2 min-w-full md:min-w-0 md:w-1/2 flex flex-col items-start md:hover:shadow-xl rounded-2xl">
-
-      {/* <div className="flex items-start justify-between w-full">
-        <div className='flex'>
-          <img alt="img" src={data?.image} className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
-          <span className="flex-grow flex flex-col pl-4">
-            <span className="title-font font-medium text-gray-900">{data?.name}</span>
-            <span className="text-gray-400 text-xs tracking-widest mt-0.5">{data?.origin}</span>
-          </span>
-        </div>
-
-        <div className=" py-1 px-2 rounded bg-gradient-to-t from-rose-500 to-pink-400 text-white text-xs font-medium tracking-widest uppercase">{data?.profession}</div>
-      </div>
-
-
-      <p className="leading-relaxed mb-8 line-clamp-4">{data?.bio}</p> */}
-
-
+    <div className="px-2 py-4 md:px-6 lg:px-12 md:py-6 my-2 min-w-full md:min-w-0 md:w-1/2 2xl:w-1/3 flex flex-col items-start md:hover:shadow-xl rounded-2xl">
       <div className=''>
         <div className='flex items-center justify-between'>
           <img

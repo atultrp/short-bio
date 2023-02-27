@@ -31,7 +31,7 @@ export default function Home() {
       </Head>
 
 
-      <div className="mt-3 md:mt-6 mx-6 md:mx-16">
+      <div className="mt-3 md:mt-6 mx-6 lg:mx-16">
 
         <div className='lg:flex flex-row-reverse items-center lg:gap-x-7'>
           <img src="/elonMusk.png" alt="poster" className='w-80 h-80 md:w-96 md:h-96 xl:w-[450px] xl:h-[450px] flex-shrink-0 object-cover object-center rounded-full mx-auto' />
