@@ -7,12 +7,14 @@ import Link from 'next/link'
 import { BiNotepad } from 'react-icons/bi'
 
 export default function Home() {
-  const [quotesData, setQuotesData] = useState([])
+  const [quoteData, setQuoteData] = useState([])
   const [bioData, setBioData] = useState()
 
   const fetchRandomQuotes = async () => {
     const response = await axios.get("https://type.fit/api/quotes")
-    setQuotesData(response.data)
+    let randomIndex = Math.floor(Math.random() * (response.data.length + 1))
+    setQuoteData(response.data[randomIndex])
+    console.log(response.data[randomIndex], randomIndex, "respise")
   }
   useEffect(() => {
     fetchRandomQuotes()
@@ -28,6 +30,7 @@ export default function Home() {
       setBioData(data)
     }
   }, [data])
+
 
 
   return (
@@ -66,18 +69,22 @@ export default function Home() {
         {/* Quotes */}
         <div className="my-6 md:my-8 md:w-1/2">
           <h2 className="custom-font uppercase text-2xl md:text-4xl font-semibold bg-gradient-to-t from-rose-500 to-pink-400 text-transparent bg-clip-text">Quote of the Day</h2>
-          <p className=' font-medium'>
-            {quotesData[Math.floor(Math.random() * (quotesData.length + 1))]?.text}
-          </p>
-          <p className=" text-xs tracking-widest mt-0.5 uppercase">
-            - {" "}{quotesData[Math.floor(Math.random() * (quotesData.length + 1))]?.author}
-          </p>
+          {quoteData && <div className='mt-1'>
+            {quoteData?.text?.split(";")?.map(item => {
+              return <p className='text-sm sm:text-base font-medium'>
+                {item}
+              </p>
+            })}
+            <p className="text-xs tracking-widest mt-0.5 uppercase">
+              - {" "}{quoteData?.author}
+            </p>
+          </div>}
         </div>
 
         {/* BIO Cards */}
         <div id='bioSection'>
           <h2 className="custom-font uppercase text-2xl md:text-4xl font-semibold bg-gradient-to-t from-rose-500 to-pink-400 text-transparent bg-clip-text">Short Bios of Famous Personalities</h2>
-          <p className=''>Welcome to our website celebrating the lives of famous and influential people. Explore our collection of short biographies, from Steve Jobs to Nelson Mandela, and be inspired by their legacies. Discover the stories of some of the world's most remarkable individuals and find motivation in their achievements.</p>
+          <p className='text-sm sm:text-base mt-1'>Welcome to our website celebrating the lives of famous and influential people. Explore our collection of short biographies, from Steve Jobs to Nelson Mandela, and be inspired by their legacies. Discover the stories of some of the world's most remarkable individuals and find motivation in their achievements.</p>
 
           {/* Searchbar */}
           <div class='max-w-md my-6'>
