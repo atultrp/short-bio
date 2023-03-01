@@ -8,6 +8,7 @@ import { BiNotepad } from 'react-icons/bi'
 
 export default function Home() {
   const [quotesData, setQuotesData] = useState([])
+  const [bioData, setBioData] = useState()
 
   const fetchRandomQuotes = async () => {
     const response = await axios.get("https://type.fit/api/quotes")
@@ -16,6 +17,18 @@ export default function Home() {
   useEffect(() => {
     fetchRandomQuotes()
   }, []);
+
+  const handleSearch = (query) => {
+    let tempData = data.filter((item) => item.name.toLowerCase().includes(query.toLowerCase()))
+    setBioData(tempData)
+  }
+
+  useEffect(() => {
+    if (data) {
+      setBioData(data)
+    }
+  }, [data])
+
 
   return (
     <>
@@ -65,8 +78,30 @@ export default function Home() {
         <div id='bioSection'>
           <h2 className="custom-font uppercase text-2xl md:text-4xl font-semibold bg-gradient-to-t from-rose-500 to-pink-400 text-transparent bg-clip-text">Short Bios of Famous Personalities</h2>
           <p className=''>Welcome to our website celebrating the lives of famous and influential people. Explore our collection of short biographies, from Steve Jobs to Nelson Mandela, and be inspired by their legacies. Discover the stories of some of the world's most remarkable individuals and find motivation in their achievements.</p>
+
+          {/* Searchbar */}
+          <div class='max-w-md my-6'>
+            <div class="relative flex items-center w-full h-12 rounded-lg shadow-[0px_0px_10px_0px_#00000024]
+            focus-within:shadow-[0px_0px_15px_2px_#00000024] ease-in-out transition-shadow bg-white overflow-hidden">
+              <div class="grid place-items-center h-full w-12 text-rose-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+
+              <input
+                class="peer h-full w-full outline-none text-sm text-gray-700 pr-2"
+                type="text"
+                id="search"
+                placeholder="Search Personalities..."
+                onChange={(e) => { handleSearch(e.target.value) }}
+              />
+            </div>
+          </div>
+
+          {/* Cards */}
           <div className='my-4 flex flex-wrap'>
-            {data.map((item, index) => {
+            {bioData?.map((item, index) => {
               return <Card key={index} data={item} />
             })}
           </div>
