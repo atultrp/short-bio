@@ -9,14 +9,12 @@ import { BiNotepad } from 'react-icons/bi'
 export default function Home() {
   const [quotesData, setQuotesData] = useState([])
 
+  const fetchRandomQuotes = async () => {
+    const response = await axios.get("https://type.fit/api/quotes")
+    setQuotesData(response.data)
+  }
   useEffect(() => {
-    axios.get('https://type.fit/api/quotes')
-      .then(res => {
-        setQuotesData(res.data)
-      })
-      .catch((err) => {
-        console.error(err)
-      })
+    fetchRandomQuotes()
   }, []);
 
   return (

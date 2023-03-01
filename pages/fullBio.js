@@ -9,6 +9,7 @@ import Link from 'next/link';
 import data from '../data/bioData.json'
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import Card from '@/components/Card';
 
 const fullBio = () => {
 
@@ -17,13 +18,32 @@ const fullBio = () => {
   const [shareUrl, setShareUrl] = useState("")
   const router = useRouter();
   const id = router.query.id
+  const [randomIndexArray, setRandomIndexArray] = useState()
 
   useEffect(() => {
-    let tempData = data.filter((item) => item.id === parseInt(id))
-    setBioData(tempData[0])
-    setBriefBioContent(tempData[0]?.briefBio.split("\n\n"))
-    setShareUrl(window.location.href)
+    if (id) {
+      let tempData = data.filter((item) => item.id === parseInt(id))
+      setBioData(tempData[0])
+      setBriefBioContent(tempData[0]?.briefBio.split("\n\n"))
+      setShareUrl(window.location.href)
+      if (!randomIndex().includes(parseInt(id))) {
+        setRandomIndexArray(randomIndex())
+      }
+    }
   }, [id])
+
+  console.log("randomIndexArray", randomIndexArray)
+
+  // create a function to find two random numbers from the index of data array
+  const randomIndex = () => {
+    let randomIndex1 = Math.floor(Math.random() * (data.length + 1))
+    let randomIndex2 = Math.floor(Math.random() * (data.length + 1))
+    if (randomIndex1 === randomIndex2) {
+      randomIndex()
+    }
+    return [randomIndex1, randomIndex2]
+  }
+
 
 
   return (
@@ -83,7 +103,14 @@ const fullBio = () => {
         </div>
       </div>
 
-
+      <div className='mt-3 md:mt-6 mx-6 lg:mx-16'>
+        <h2 className="custom-font uppercase text-2xl md:text-4xl font-semibold bg-gradient-to-t from-rose-500 to-pink-400 text-transparent bg-clip-text">Some Other Famous Personalities</h2>
+        <div className='my-4 flex flex-wrap'>
+          {data.map((item, index) => {
+            return <Card key={index} data={item} />
+          })}
+        </div>
+      </div>
     </>
   )
 }
