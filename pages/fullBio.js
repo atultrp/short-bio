@@ -38,27 +38,17 @@ const fullBio = () => {
         <div className="sm:flex items-center sm:px-7 justify-between w-full border-b-2 border-gray-100 py-4 sticky top-14 sm:top-[88px] z-30 bg-white">
 
           <div className='flex items-center'>
-            <img alt="pic" src={bioData?.image} className="w-36 h-36 rounded-full flex-shrink-0 object-cover object-center" />
+            <img alt="pic" src={bioData?.image} className="w-28 h-28 sm:w-36 sm:h-36 rounded-full flex-shrink-0 object-cover object-center" />
             <span className="flex-grow flex flex-col ml-4 sm:ml-10">
-              <span className="title-font font-medium mr-0 ml-auto sm:ml-0 text-gray-900 tracking-widest uppercase text-sm sm:text-base">{bioData?.name}</span>
-              <span className="mr-0 ml-auto sm:ml-0 w-fit text-xs font-medium tracking-widest uppercase">{bioData?.profession}</span>
-              <span className="text-gray-400 text-xs tracking-widest mt-0.5 mr-0 ml-auto sm:ml-0">({bioData?.origin})</span>
-              <div className="flex sm:hidden items-center mt-3 w-full justify-end ">
-                <WhatsappShareButton
-                  url={shareUrl} >
-                  <BsWhatsapp className='text-2xl text-green-500 mr-4 hover:scale-125 ease-in-out duration-200' />
-                </WhatsappShareButton>
-                <TwitterShareButton
-                  url={shareUrl} >
-                  <TiSocialTwitter className='text-4xl text-rose-400 hover:scale-125 ease-in-out duration-200' />
-                </TwitterShareButton>
-              </div>
+              <span className="text-right sm:text-left title-font font-medium mr-0 ml-auto sm:ml-0 text-gray-900 tracking-widest uppercase text-sm sm:text-base">{bioData?.name}</span>
+              <span className="text-right sm:text-left mr-0 ml-auto sm:ml-0 w-fit text-xs font-medium tracking-widest uppercase">{bioData?.profession}</span>
+              <span className="text-right sm:text-left text-gray-400 text-xs tracking-widest mt-0.5 mr-0 ml-auto sm:ml-0">({bioData?.origin})</span>
             </span>
           </div>
 
-          <div className='sm:flex mt-4 sm:mt-0 hidden'>
+          <div className='sm:flex'>
             {/* Share */}
-            <div className="flex items-center flex-wrap mt-auto w-full justify-end">
+            <div className="flex items-center w-full justify-end">
               <WhatsappShareButton
                 url={shareUrl} >
                 <BsWhatsapp className='text-2xl text-green-500 mr-4 hover:scale-125 ease-in-out duration-200' />
@@ -92,6 +82,8 @@ const fullBio = () => {
           </Link>
         </div>
       </div>
+
+
     </>
   )
 }
