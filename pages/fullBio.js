@@ -37,10 +37,11 @@ const fullBio = () => {
   const randomIndex = () => {
     let randomIndex1 = Math.floor(Math.random() * (data.length + 1))
     let randomIndex2 = Math.floor(Math.random() * (data.length + 1))
-    if (randomIndex1 === randomIndex2) {
+    let randomIndex3 = Math.floor(Math.random() * (data.length + 1))
+    if (randomIndex1 === randomIndex2 || randomIndex1 === randomIndex3 || randomIndex2 === randomIndex3) {
       randomIndex()
     }
-    return [randomIndex1, randomIndex2]
+    return [randomIndex1, randomIndex2, randomIndex3]
   }
 
   return (
@@ -107,6 +108,9 @@ const fullBio = () => {
           {randomIndexArray && data.map((item, index) => {
             if (item?.id === randomIndexArray[0] || item?.id === randomIndexArray[1]) {
               return <Card key={index} data={item} />
+            }
+            if (item?.id === randomIndexArray[2]) {
+              return <Card key={index} data={item} customClasses="hidden 2xl:block" />
             }
           })}
         </div>

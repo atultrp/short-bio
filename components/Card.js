@@ -8,7 +8,7 @@ import {
 
 import { useRouter } from 'next/router';
 
-const Card = ({ data }) => {
+const Card = ({ data, customClasses }) => {
   const router = useRouter();
   const [shareUrl, setShareUrl] = useState("")
 
@@ -22,7 +22,7 @@ const Card = ({ data }) => {
   
 
   return (
-    <div className="px-2 py-4 md:px-6 lg:px-12 md:py-6 my-2 min-w-full md:min-w-0 md:w-1/2 2xl:w-1/3 flex flex-col items-start rounded-2xl hover:shadow-[-10px_-10px_30px_4px_rgba(139,92,246,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)] ease-in-out transition-shadow">
+    <div className={`${customClasses} px-2 py-4 md:px-6 lg:px-12 md:py-6 my-2 min-w-full md:min-w-0 md:w-1/2 2xl:w-1/3 flex flex-col items-start rounded-2xl hover:shadow-[-10px_-10px_30px_4px_rgba(139,92,246,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)] ease-in-out transition-shadow`}>
       <div className=''>
         <div className='flex items-center justify-between'>
           <img
