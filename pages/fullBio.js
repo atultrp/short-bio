@@ -34,7 +34,6 @@ const fullBio = () => {
 
   console.log("randomIndexArray", randomIndexArray)
 
-  // create a function to find two random numbers from the index of data array
   const randomIndex = () => {
     let randomIndex1 = Math.floor(Math.random() * (data.length + 1))
     let randomIndex2 = Math.floor(Math.random() * (data.length + 1))
@@ -43,8 +42,6 @@ const fullBio = () => {
     }
     return [randomIndex1, randomIndex2]
   }
-
-
 
   return (
     <>
@@ -105,10 +102,23 @@ const fullBio = () => {
 
       <div className='mt-3 md:mt-6 mx-6 lg:mx-16'>
         <h2 className="custom-font uppercase text-2xl md:text-4xl font-semibold bg-gradient-to-t from-rose-500 to-pink-400 text-transparent bg-clip-text">Some Other Famous Personalities</h2>
+
         <div className='my-4 flex flex-wrap'>
-          {data.map((item, index) => {
-            return <Card key={index} data={item} />
+          {randomIndexArray && data.map((item, index) => {
+            if (item?.id === randomIndexArray[0] || item?.id === randomIndexArray[1]) {
+              return <Card key={index} data={item} />
+            }
           })}
+        </div>
+        <div className="cursor-pointer w-fit mx-auto my-3 md:my-6">
+          <Link href={"/"}>
+            <div className='text-rose-400 flex items-center space-x-1 hover:scale-110 duration-300 hover:underline hover:underline-offset-8'>
+              <span className='font-semibold'>
+                View More
+              </span>
+              <BsArrowRight className='text-xl' />
+            </div>
+          </Link>
         </div>
       </div>
     </>
