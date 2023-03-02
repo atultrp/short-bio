@@ -6,12 +6,14 @@ import data from '../data/bioData.json'
 import Link from 'next/link'
 import { BiNotepad } from 'react-icons/bi'
 import useOnClickOutside from '@/hooks/useOnClickOutside'
+import SkeletonCard from '@/components/SkeletonCard'
 
 export default function Home() {
   const [quoteData, setQuoteData] = useState([])
   const [bioData, setBioData] = useState([])
   const [filterVal, setFilterVal] = useState()
   const [openOptions, setOpenOptions] = useState(false)
+  const [showSkeleton, setShowSkeleton] = useState(true)
 
   let options = ["Name", "Profession", "Origin"]
   const popUpRef = useRef();
@@ -47,6 +49,14 @@ export default function Home() {
       setBioData(data)
     }
   }, [data])
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowSkeleton(false)
+    }, 1500)
+  }, [])
+
+
 
   return (
     <>
@@ -158,14 +168,21 @@ export default function Home() {
 
 
           {/* Cards */}
-          <div className='my-4 flex flex-wrap'>
-            {bioData?.length !== 0 ? bioData?.map((item, index) => {
-              return <Card key={index} data={item} />
-            })
-              : <div className='w-full flex justify-center items-center my-6'>
-                <img src="/No_data.gif" className='w-96' />
-              </div>}
-          </div>
+          {showSkeleton ?
+            <div className='my-4 flex flex-wrap'>
+              <SkeletonCard />
+              <SkeletonCard />
+              <SkeletonCard />
+              <SkeletonCard />
+            </div>
+            : <div className='my-4 flex flex-wrap'>
+              {bioData?.length !== 0 ? bioData?.map((item, index) => {
+                return <Card key={index} data={item} />
+              })
+                : <div className='w-full flex justify-center items-center my-6'>
+                  <img src="/No_data.gif" className='w-96' />
+                </div>}
+            </div>}
         </div>
       </div>
 
