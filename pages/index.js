@@ -1,18 +1,20 @@
 import Card from '@/components/Card'
 import axios from 'axios'
 import Head from 'next/head'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import data from '../data/bioData.json'
 import Link from 'next/link'
 import { BiNotepad } from 'react-icons/bi'
+import useOnClickOutside from '@/hooks/useOnClickOutside'
 
 export default function Home() {
   const [quoteData, setQuoteData] = useState([])
-  const [bioData, setBioData] = useState()
+  const [bioData, setBioData] = useState([])
   const [filterVal, setFilterVal] = useState()
   const [openOptions, setOpenOptions] = useState(false)
 
   let options = ["Name", "Profession", "Origin"]
+  const popUpRef = useRef();
 
   const fetchRandomQuotes = async () => {
     const response = await axios.get("https://type.fit/api/quotes")
@@ -35,6 +37,10 @@ export default function Home() {
     })
     setBioData(tempData)
   }
+
+  useOnClickOutside(popUpRef, () => {
+    setOpenOptions(false)
+  });
 
   useEffect(() => {
     if (data) {
@@ -133,7 +139,7 @@ export default function Home() {
                 </div>
 
                 {/* Dropdown */}
-                <div className={`origin-top-right absolute right-0 mt-2 w-28 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none ${openOptions ? 'block' : 'hidden'}`}>
+                <div className={`origin-top-right absolute right-0 mt-2 w-28 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none ${openOptions ? 'block' : 'hidden'}`} ref={popUpRef}>
                   <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                     {options.map((item, index) => {
                       return <button type="button" className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem" onClick={() => {
@@ -153,7 +159,7 @@ export default function Home() {
 
           {/* Cards */}
           <div className='my-4 flex flex-wrap'>
-            {bioData.length !== 0 ? bioData?.map((item, index) => {
+            {bioData?.length !== 0 ? bioData?.map((item, index) => {
               return <Card key={index} data={item} />
             })
               : <div className='w-full flex justify-center items-center my-6'>
