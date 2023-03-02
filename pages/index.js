@@ -79,12 +79,12 @@ export default function Home() {
             </p>
 
             <div className="mt-8">
-              <a href="#bioSection" className='w-fit'>
-                <button className="text-[#1b1b1b] mx-auto lg:mx-0 bg-white px-6 py-2 rounded-full font-bold hover:text-white border-2 hover:duration-300 hover:border-white uppercase flex space-x-2 items-center hover:bg-gradient-to-t hover:from-rose-500 hover:to-pink-400 hover:scale-110 hover:ease-in-out">
+              <button className="text-[#1b1b1b] lg:mx-0 bg-white px-6 py-2 rounded-full font-bold hover:text-white border-2 hover:duration-300 hover:border-white hover:bg-gradient-to-t hover:from-rose-500 hover:to-pink-400 hover:scale-110 hover:ease-in-out">
+                <a href="#bioSection" className='w-fit uppercase flex space-x-2 items-center'>
                   <BiNotepad className="text-xl" />
                   <span>Explore</span>
-                </button>
-              </a>
+                </a>
+              </button>
             </div>
           </div>
 
