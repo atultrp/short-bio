@@ -781,31 +781,212 @@
         "origin": "Hardin County, Kentucky",
         "profession": "Lawyer, Politician",
         "bio": "Abraham Lincoln was the 16th President of the United States, serving from 1861 until his assassination in 1865. He led the country through its Civil War—its bloodiest war and its greatest moral, constitutional, and political crisis. In doing so, he preserved the Union, abolished slavery, strengthened the federal government, and modernized the economy. Lincoln is widely considered one of America's greatest heroes due to his leadership during one of the country's most challenging times.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Abraham_Lincoln_O-77_matte_collodion_print.jpg/440px-Abraham_Lincoln_O-77_matte_collodion_print.jpg",
-        "id": 87
+        "image": "https://cdn.pixabay.com/photo/2013/07/12/14/35/abraham-lincoln-148527__340.png",
+        "id": 87,
+        "briefBio": "Abraham Lincoln was the 16th President of the United States, serving from 1861 until his assassination in 1865. He was born on February 12, 1809, in Hodgenville, Kentucky, to a poor family. Despite his humble origins, Lincoln became one of the most influential leaders in American history, known for his leadership during the Civil War and his efforts to abolish slavery.\n\nBefore his presidency, Lincoln was a lawyer and a member of the Illinois House of Representatives. He later served in the U.S. House of Representatives and ran for the Senate, although he lost the race to Stephen A. Douglas. In 1860, he won the Republican nomination for president and went on to defeat three other candidates, becoming the first president from the newly formed Republican Party.\n\nDuring his presidency, Lincoln faced many challenges, including the Civil War, which began just a few weeks after he took office. He also signed the Emancipation Proclamation in 1863, which declared that all slaves in the Confederate states \"shall be then, thenceforward, and forever free.\" Lincoln was known for his oratory skills and delivered many famous speeches, including the Gettysburg Address, which is considered one of the most important speeches in American history.\n\nLincoln was assassinated on April 14, 1865, by John Wilkes Booth, a Confederate sympathizer. His death was a great loss to the country, and he is remembered as one of America's greatest leaders."
     },
     {
         "name": "Franklin D. Roosevelt",
         "origin": "Hyde Park, New York",
         "profession": "Lawyer, Politician",
         "bio": "Franklin D. Roosevelt was the 32nd President of the United States, serving from 1933 until his death in 1945. He led the country through its Great Depression and its entry into World War II, and he is widely considered one of the greatest Presidents in U.S. history for his leadership during some of the country's most challenging times. During his presidency, Roosevelt implemented policies known as the New Deal, which aimed to provide relief and recovery from the Great Depression, and he led the country to victory in World War II.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/FDR_in_1933.jpg/440px-FDR_in_1933.jpg",
-        "id": 88
+        "image": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2009/01/16/17/114104.jpg?quality=75&width=1200&auto=webp",
+        "id": 88,
+        "briefBio": "Franklin Delano Roosevelt (FDR) was the 32nd President of the United States, serving from 1933 until his death in 1945. Born in Hyde Park, New York, in 1882, FDR was a member of the Democratic Party and led the country through some of its most significant challenges, including the Great Depression and World War II.\n\nDuring his presidency, FDR implemented the New Deal, a series of programs and policies aimed at providing economic relief and recovery for the country. The New Deal included initiatives such as the Civilian Conservation Corps, which put unemployed men to work on public lands, and the Social Security Act, which established a system of retirement benefits for workers.\n\nFDR's leadership during World War II was also crucial. He worked with Allied leaders to develop strategies for defeating Nazi Germany and Japan, and he addressed the nation in his famous \"fireside chats\" to rally support for the war effort.\n\nFDR was elected to four terms as President, but he died in office on April 12, 1945, just months before the end of World War II. He remains one of the most revered and influential presidents in American history."
     },
     {
         "name": "Thomas Jefferson",
         "origin": "Shadwell, Virginia",
         "profession": "Lawyer, Planter, Politician",
         "bio": "Thomas Jefferson was the 3rd President of the United States, serving from 1801 to 1809. He is best known for his role as a Founding Father and author of the Declaration of Independence. Jefferson also served as a diplomat, writer, and philosopher, and he was a strong advocate for democracy, republicanism, and individual rights. During his presidency, Jefferson oversaw the Louisiana Purchase, which doubled the size of the United States, and he was instrumental in the establishment of the University of Virginia.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Thomas_Jefferson_by_Rembrandt_Peale%2C_1800.jpg/440px-Thomas_Jefferson_by_Rembrandt_Peale%2C_1800.jpg",
-        "id": 89
+        "image": "https://www.gutenberg.org/files/45847/45847-h/images/frontis.jpg",
+        "id": 89,
+        "briefBio": "Thomas Jefferson (1743-1826) was an American statesman, diplomat, and the third president of the United States. He is best known for his role in drafting the Declaration of Independence, which declared the colonies' independence from Great Britain. Jefferson was born in Virginia, where he also served as the state's governor and later represented it in the US Congress.\n\nJefferson was a proponent of democracy, individual liberty, and religious freedom. As president, he made the Louisiana Purchase, which doubled the size of the United States. He also commissioned the Lewis and Clark expedition to explore the newly acquired territory. Jefferson was an advocate of education, founding the University of Virginia, which emphasized liberal arts education.\n\nJefferson's presidency was not without controversy. He was criticized for his handling of the Barbary Wars, where he refused to pay tribute to North African pirates, leading to a conflict. He was also criticized for his policy towards Native Americans, which included forced relocation and assimilation.\n\nJefferson's legacy as a founding father of the United States is significant. He was a polymath, a man of many talents, interests, and achievements. He is remembered as a champion of democracy and individual liberty, and his ideas have influenced American politics to this day."
     },
     {
         "name": "Dwight D. Eisenhower",
         "origin": "Denison, Texas",
         "profession": "Soldier, politician",
         "bio": "Dwight D. Eisenhower was the 34th President of the United States, serving from 1953 to 1961. He was a highly successful military leader during World War II, serving as Supreme Commander of the Allied Forces in Europe. As president, he oversaw the early years of the Cold War and the beginning of the Civil Rights Movement.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4.jpg",
-        "id": 90
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Dwight_D._Eisenhower%2C_official_photo_portrait%2C_May_29%2C_1959.jpg/256px-Dwight_D._Eisenhower%2C_official_photo_portrait%2C_May_29%2C_1959.jpg",
+        "id": 90,
+        "briefBio": "Dwight D. Eisenhower, also known as \"Ike,\" was the 34th President of the United States, serving from 1953 to 1961. He was born on October 14, 1890, in Denison, Texas, and raised in Kansas. Eisenhower graduated from the United States Military Academy at West Point in 1915 and went on to serve in the US Army, eventually becoming a five-star general and Supreme Commander of the Allied Forces in Europe during World War II.\n\nAfter the war, Eisenhower served as president of Columbia University and as the first Supreme Commander of NATO before being elected President of the United States in 1952. During his presidency, Eisenhower oversaw the end of the Korean War and the beginning of the Cold War. He also implemented policies to promote civil rights, such as desegregating schools and the military.\n\nEisenhower's presidency was marked by a strong focus on national defense and foreign policy, including the development of the U-2 spy plane and the creation of the Department of Health, Education, and Welfare. He also authorized the creation of NASA, which led to the space race between the United States and the Soviet Union.\n\nEisenhower's presidency is often remembered for his farewell address in which he warned against the dangers of the \"military-industrial complex\" and the need to maintain a balance between national defense and domestic priorities. He died on March 28, 1969, in Washington, D.C., at the age of 78."
+    },
+    {
+        "name": "Tom Hanks",
+        "origin": "Concord, California, USA",
+        "profession": "Actor, Filmmaker",
+        "bio": "Tom Hanks is an American actor and filmmaker. He is known for his roles in popular films like Forrest Gump, The Green Mile, Cast Away, and many others. He has won numerous awards for his acting, including two Academy Awards, seven Primetime Emmy Awards, and four Golden Globe Awards.",
+        "image": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/04/26/15/tom-hanks.jpg?quality=75&width=1200&auto=webp",
+        "briefBio": "Tom Hanks is an American actor and filmmaker, born on July 9, 1956 in Concord, California. He began his acting career in the late 1970s, but it was his portrayal of the lead character in the 1988 film \"Big\" that launched him to stardom. Since then, he has become one of the most successful and respected actors in Hollywood, known for his versatility and ability to play a wide range of characters.\n\nHanks has won numerous awards throughout his career, including two Academy Awards for Best Actor, one for his role in the 1993 film \"Philadelphia\" and another for the 1994 film \"Forrest Gump.\" He has also received critical acclaim for his roles in films such as \"Saving Private Ryan,\" \"Cast Away,\" and \"Captain Phillips.\"\n\nIn addition to his acting work, Hanks has also dabbled in writing and directing. He wrote, directed, and starred in the 1996 film \"That Thing You Do!\" and has since directed several other films, including \"Larry Crowne\" and \"Greyhound.\"\n\nOutside of his film career, Hanks is known for his philanthropic work, particularly in the areas of education and the environment. He is also a noted collector of vintage typewriters and has published a book of short stories called \"Uncommon Type,\" which includes a typewriter in each story.",
+        "id": 91
+    },
+    {
+        "name": "Robert De Niro",
+        "origin": "New York City, New York, USA",
+        "profession": "Actor, Producer, Director",
+        "bio": "Robert De Niro is an American actor, producer, and director. He is widely regarded as one of the greatest actors of all time and has won numerous awards, including two Academy Awards, a Golden Globe Award, and a Screen Actors Guild Award. De Niro has appeared in many iconic films throughout his career, including The Godfather Part II, Taxi Driver, Raging Bull, and Goodfellas.",
+        "image": "https://media.gq.com/photos/5582c43de52bc4b477a9cb42/master/w_1600%2Cc_limit/gq-features-010107-GQfeature1v.jpg",
+        "briefBio": "Robert De Niro is an American actor, producer, and director. He was born on August 17, 1943, in New York City. De Niro started his acting career in the 1960s and gained critical acclaim for his roles in films such as \"The Godfather: Part II\" (1974), \"Taxi Driver\" (1976), and \"Raging Bull\" (1980).\n\nOver the course of his career, De Niro has received numerous awards and accolades, including two Academy Awards for Best Actor for his performances in \"Raging Bull\" and \"The Godfather: Part II\". He has also been nominated for an additional five Academy Awards and eight Golden Globe Awards.\n\nIn addition to his acting career, De Niro is also a successful producer and has founded his own production company, Tribeca Productions. He has directed several films, including \"A Bronx Tale\" (1993) and \"The Good Shepherd\" (2006).\n\nDe Niro has also been involved in various humanitarian efforts and social causes, including raising awareness for autism research and environmental issues. He remains one of the most respected and influential actors in Hollywood.",
+        "id": 92
+    },
+    {
+        "name": "Leonardo DiCaprio",
+        "origin": "Los Angeles, California, USA",
+        "profession": "Actor, Producer",
+        "bio": "Leonardo DiCaprio is an American actor and producer. He has won numerous awards for his acting, including an Academy Award, a BAFTA Award, and a Golden Globe Award. DiCaprio is known for his roles in popular films like Titanic, Inception, The Wolf of Wall Street, and many others.",
+        "image": "https://www.lalibre.be/resizer/GxAYXPCGzqpRDUUJODU3EgoEOIQ=/1200x800/filters:format(jpeg):focal(1316x928:1326x918)/cloudfront-eu-central-1.images.arcpublishing.com/ipmgroup/WY2SLVO6EJFQDLRB242JDPXXKE.jpg",
+        "briefBio": "Leonardo DiCaprio is an American actor, producer, and environmental activist. He was born on November 11, 1974 in Los Angeles, California. He began his acting career in the late 1980s and gained recognition in the 1990s with his roles in movies such as \"What's Eating Gilbert Grape\" and \"Romeo + Juliet\". He has since gone on to star in many critically acclaimed and commercially successful movies.\n\nDiCaprio's breakthrough role was in the 1997 movie \"Titanic\", which became one of the highest-grossing movies of all time. He has also received critical acclaim for his performances in movies such as \"The Aviator\", \"The Departed\", \"Inception\", \"The Revenant\", and many others. He has been nominated for numerous awards, including five Academy Awards, and has won one for Best Actor for his role in \"The Revenant\".\n\nIn addition to his acting career, DiCaprio is also known for his environmental activism. He founded the Leonardo DiCaprio Foundation in 1998 to support environmental causes, and has been involved in many initiatives to raise awareness about climate change and protect the environment.\n\nDiCaprio is widely regarded as one of the greatest actors of his generation and has a net worth of over $260 million. He continues to act in movies and use his platform to raise awareness about environmental issues.",
+        "id": 93
+    },
+    {
+        "name": "Denzel Washington",
+        "origin": "Mount Vernon, New York, USA",
+        "profession": "Actor, Director, Producer",
+        "bio": "Denzel Washington is an American actor, director, and producer. He has won two Academy Awards, three Golden Globe Awards, and a Tony Award, among other accolades. Washington is known for his powerful performances in films like Training Day, Malcolm X, The Hurricane, and many others.",
+        "image": "https://media.vanityfair.com/photos/5409d0f2193f09557a7d1639/1:1/pass/equalizer-tout.jpg",
+        "briefBio": "Denzel Washington is an American actor, director, and producer. He was born on December 28, 1954, in Mount Vernon, New York, USA. Washington attended Fordham University, where he graduated with a B.A. in Drama and Journalism in 1977. He began his acting career in theatre, performing in several Off-Broadway productions, and then went on to star in several television shows and films.\n\nWashington's breakthrough role came in the 1982 NBC medical drama St. Elsewhere, in which he played a young resident. He later starred in popular films such as Malcolm X, The Hurricane, Training Day, and The Book of Eli. Washington has won numerous awards for his work, including two Academy Awards, three Golden Globe Awards, and a Tony Award. In addition to his acting work, Washington has also directed and produced several films, including Antwone Fisher and The Great Debaters.\n\nWashington is known for his versatility and range as an actor, and his ability to portray complex characters with depth and nuance. He is widely regarded as one of the greatest actors of his generation and has been praised for his contributions to the film industry both in front of and behind the camera.",
+        "id": 94
+    },
+    {
+        "name": "Brad Pitt",
+        "origin": "Shawnee, Oklahoma, USA",
+        "profession": "Actor, Producer",
+        "bio": "Brad Pitt is an American actor and producer. He has won numerous awards for his acting, including an Academy Award, a Golden Globe Award, and a Screen Actors Guild Award. Pitt is known for his roles in popular films like Fight Club, Ocean's Eleven, and Once Upon a Time in Hollywood.",
+        "image": "https://hips.hearstapps.com/hmg-prod/images/actor-brad-pitt-attends-the-screening-of-once-upon-a-time-news-photo-1578089601.jpg?crop=1.00xw:0.667xh;0,0.0363xh&resize=1200:*",
+        "briefBio": "Brad Pitt is an American actor and producer who has appeared in a wide range of films across different genres. He was born on December 18, 1963, in Shawnee, Oklahoma, and raised in Springfield, Missouri. He attended the University of Missouri where he studied journalism, but dropped out two weeks before completing his degree to pursue a career in acting.\n\nPitt's breakthrough role came in 1991 with the film \"Thelma & Louise\", and since then he has starred in numerous critically acclaimed movies such as \"Fight Club\", \"Ocean's Eleven\", and \"Inglourious Basterds\". He has received numerous awards and nominations for his work, including an Academy Award for Best Supporting Actor for his performance in \"Once Upon a Time in Hollywood\" (2019).\n\nPitt is also known for his philanthropic work, particularly his support for environmental causes and efforts to rebuild New Orleans after Hurricane Katrina. He has been involved with various charities, including the Make It Right Foundation and the Jolie-Pitt Foundation, which he co-founded with his ex-wife Angelina Jolie.\n\nIn addition to his acting career, Pitt has also produced numerous films, including \"The Departed\" and \"12 Years a Slave\", both of which won Academy Awards for Best Picture. He has been named one of the world's most attractive men and has been the face of several high-profile advertising campaigns.",
+        "id": 95
+    },
+    {
+        "name": "George Clooney",
+        "origin": "Lexington, Kentucky, USA",
+        "profession": "Actor, Producer, Director",
+        "bio": "George Clooney is an American actor, producer, and director. He has won three Golden Globe Awards and two Academy Awards, among other accolades. Clooney is known for his roles in popular films like O Brother, Where Art Thou?, The Descendants, and many others.",
+        "image": "data:image/jpeg;base64,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",
+        "briefBio": "George Clooney is an American actor, director, producer, and screenwriter who has been a prominent figure in Hollywood for several decades. He was born on May 6, 1961, in Lexington, Kentucky, and grew up in a family involved in broadcasting and journalism. He initially pursued a career in journalism but eventually transitioned to acting and made his breakthrough on television in the medical drama \"ER\" in the mid-1990s.\n\nClooney has since appeared in numerous films, including \"Ocean's Eleven,\" \"Syriana,\" and \"Up in the Air,\" and has won several awards for his performances, including an Academy Award for Best Supporting Actor for his role in \"Syriana.\" He is also known for his humanitarian work, particularly in the areas of disaster relief and human rights advocacy, and was named a United Nations Messenger of Peace in 2008.\n\nIn addition to his acting and humanitarian work, Clooney has also directed and produced several films, including \"Good Night, and Good Luck\" and \"The Ides of March.\" He has been recognized for his contributions to the film industry and philanthropic efforts with numerous awards and honors, including the AFI Life Achievement Award and the Bob Hope Humanitarian Award.",
+        "id": 96
+    },
+    {
+        "name": "Morgan Freeman",
+        "origin": "Memphis, Tennessee, USA",
+        "profession": "Actor, Producer, Director",
+        "bio": "Morgan Freeman is an American actor, producer, and narrator. He has won numerous awards for his acting, including an Academy Award, a Golden Globe Award, and a Screen Actors Guild Award. Freeman is known for his roles in popular films like The Shawshank Redemption, Million Dollar Baby, and Invictus.",
+        "image": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/03/04/09/morganfreeman.jpg?quality=75&width=1200&auto=webp",
+        "briefBio": "Morgan Freeman is an American actor, producer, and narrator known for his deep, distinctive voice and his powerful performances in a variety of film and television roles. He was born on June 1, 1937, in Memphis, Tennessee, and grew up in a family of modest means. Freeman served in the United States Air Force and then began his acting career on stage in the 1960s, later moving on to television and film.\n\nFreeman's breakthrough role came in the 1987 film \"Street Smart\", for which he received an Academy Award nomination for Best Supporting Actor. He went on to star in a number of critically acclaimed films, including \"Driving Miss Daisy\", \"Glory\", \"The Shawshank Redemption\", \"Million Dollar Baby\", and \"Invictus\". He has won numerous awards throughout his career, including an Academy Award, a Golden Globe Award, and a Screen Actors Guild Award.\n\nIn addition to his acting work, Freeman is also known for his distinctive voice, and has lent his vocal talents to a number of documentary films, including \"March of the Penguins\" and \"Through the Wormhole\". He has also been a prominent supporter of various charitable causes, and has been involved in environmental and civil rights activism.\n\nThroughout his career, Freeman has become a highly respected and celebrated figure in the entertainment industry, known for his talent, his distinctive voice, and his dedication to social causes.",
+        "id": 97
+    },
+    {
+        "name": "Jack Nicholson",
+        "origin": "Neptune City, New Jersey, USA",
+        "profession": "Actor, Producer, Director",
+        "bio": "Jack Nicholson is an American actor, producer, and director. He has won three Academy Awards, two BAFTA Awards, and a Golden Globe Award, among other accolades. Nicholson is known for his roles in popular films like One Flew Over the Cuckoo's Nest, The Shining, and many others.",
+        "image": "https://www.heraldweekly.com/wp-content/uploads/cmg_images/355852/rid_50e0256d551676794cafa1fbf0d1ac09/GettyImages-1272463679-jack-nicholson-oscars-1-scaled.jpg.pro-cmg.jpg",
+        "briefBio": "Jack Nicholson is an American actor, director, and producer. He was born on April 22, 1937, in Neptune City, New Jersey, USA. Nicholson's career in Hollywood spans over six decades, during which he has won three Academy Awards, six Golden Globe Awards, and numerous other accolades. He is widely regarded as one of the greatest actors in film history.\n\nNicholson began his acting career in the late 1950s and gained recognition for his supporting roles in various films in the 1960s, including \"Easy Rider,\" \"The Raven,\" and \"Five Easy Pieces.\" His breakthrough came with the 1975 film \"One Flew Over the Cuckoo's Nest,\" in which he played the lead role of Randle McMurphy. The film won five Academy Awards, including Best Actor for Nicholson.\n\nSome of his other notable films include \"The Shining,\" \"Batman,\" \"A Few Good Men,\" \"As Good as It Gets,\" and \"The Departed.\" He has worked with several renowned directors, including Stanley Kubrick, Martin Scorsese, and Tim Burton.\n\nIn addition to his acting career, Nicholson is also a writer and director. He has directed two films, \"Drive, He Said\" and \"Goin' South.\" Nicholson is known for his off-screen persona, which includes his love for basketball and his involvement in liberal political causes.",
+        "id": 98
+    },
+    {
+        "name": "Al Pacino",
+        "origin": "New York City, New York, USA",
+        "profession": "Actor, Producer, Director",
+        "bio": "Al Pacino is an American actor, producer, and director. He has won two Academy Awards, a Golden Globe Award, and a Screen Actors Guild Award, among other accolades. Pacino is known for his roles in popular films like The Godfather, Scarface, and many others.",
+        "image": "https://media.gq-magazine.co.uk/photos/5ea2bd341027960008de3b6a/1:1/w_1154,h_1154,c_limit/GettyImages-1195327731.jpg",
+        "briefBio": "Al Pacino is a legendary American actor and filmmaker. Born in East Harlem, New York City in 1940, Pacino grew up in poverty and began acting in local theater productions as a teenager. He studied at the prestigious Actors Studio in New York City and began his professional acting career on stage before transitioning to film.\n\nPacino is widely regarded as one of the greatest actors of all time, known for his intense and powerful performances. He has been nominated for numerous awards throughout his career, including eight Academy Awards, winning Best Actor for his role in \"Scent of a Woman\" (1992).\n\nPacino's filmography is extensive and includes many classic films such as \"The Godfather\" trilogy, \"Scarface\", \"Serpico\", and \"Heat\". He has also acted in several stage productions, including a critically acclaimed run of \"The Merchant of Venice\" in 2010.\n\nIn addition to his acting career, Pacino has directed and produced several films, including \"Looking for Richard\" (1996) and \"Salomé\" (2013). He has also been involved in various philanthropic efforts, including the Stand Up to Cancer campaign.\n\nDespite his many successes, Pacino has been known for his private and reclusive nature, rarely giving interviews or discussing his personal life in public.",
+        "id": 99
+    },
+    {
+        "name": "Meryl Streep",
+        "origin": "Summit, New Jersey, United States",
+        "profession": "Actress",
+        "bio": "Meryl Streep is widely regarded as one of the greatest actresses of all time. She has won three Academy Awards, eight Golden Globe Awards, and a Primetime Emmy Award. Streep made her screen debut in 1977 and has since appeared in numerous films, earning critical acclaim for her performances in movies like 'Kramer vs. Kramer,' 'Sophie's Choice,' 'The Devil Wears Prada,' and 'Doubt.'",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Meryl_Streep_at_TIFF_2016.jpg/440px-Meryl_Streep_at_TIFF_2016.jpg",
+        "id": 100
+    },
+    {
+        "name": "Audrey Hepburn",
+        "origin": "Ixelles, Brussels, Belgium",
+        "profession": "Actress",
+        "bio": "Audrey Hepburn was a British actress and humanitarian. She is widely regarded as one of the greatest actresses of the 20th century, known for her elegance, charm, and iconic roles in films like 'Roman Holiday,' 'Sabrina,' and 'Breakfast at Tiffany's.' Hepburn won an Academy Award, a Golden Globe, and a BAFTA Award for her work in 'Roman Holiday.' In addition to her acting career, Hepburn was also a Goodwill Ambassador for UNICEF.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Audrey_Hepburn_-_1956.jpg/440px-Audrey_Hepburn_-_1956.jpg",
+        "id": 101
+    },
+    {
+        "name": "Katharine Hepburn",
+        "origin": "Hartford, Connecticut, United States",
+        "profession": "Actress",
+        "bio": "Katharine Hepburn was an American actress known for her fierce independence and spirited personality. She won four Academy Awards and was nominated for a total of twelve, making her the most nominated actor in history. Hepburn's career spanned over six decades and she appeared in more than 50 films, including classics like 'The Philadelphia Story,' 'Guess Who's Coming to Dinner,' and 'On Golden Pond.'",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Katharine_Hepburn_-_studio_publicity_Gattaca.jpg/440px-Katharine_Hepburn_-_studio_publicity_Gattaca.jpg",
+        "id": 102
+    },
+    {
+        "name": "Ingrid Bergman",
+        "origin": "Stockholm, Sweden",
+        "profession": "Actress",
+        "bio": "Ingrid Bergman was a Swedish actress who appeared in films in Europe and Hollywood. She won three Academy Awards, two Primetime Emmy Awards, and a Tony Award throughout her career. Bergman's most notable films include 'Casablanca,' 'Gaslight,' and 'Anastasia.' She was known for her natural beauty and her ability to convey emotion through her performances.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Ingrid_Bergman_1944_portrait.jpg/440px-Ingrid_Bergman_1944_portrait.jpg",
+        "id": 103
+    },
+    {
+        "name": "Angelina Jolie",
+        "origin": "Los Angeles, California, U.S.",
+        "profession": "Actress, Filmmaker, Humanitarian",
+        "bio": "Angelina Jolie is a talented actress and filmmaker who is known for her humanitarian work around the world. She has won an Academy Award, three Golden Globe Awards, and two Screen Actors Guild Awards. Jolie has been named one of the world's most powerful women by Forbes magazine on numerous occasions. Some of her most famous films include Girl, Interrupted, Mr. and Mrs. Smith, and Maleficent.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/70/Angelina_Jolie_2_June_2014_%28cropped%29.jpg",
+        "id": 104
+    },
+    {
+        "name": "Nicole Kidman",
+        "origin": "Honolulu, Hawaii, U.S.",
+        "profession": "Actress, Producer",
+        "bio": "Nicole Kidman is a highly acclaimed actress and producer who has won an Academy Award, two Primetime Emmy Awards, and five Golden Globe Awards. She has been named one of the 100 most influential people in the world by Time magazine on two occasions. Kidman is known for her roles in films such as Moulin Rouge!, The Hours, and Big Little Lies.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Nicole_Kidman_Cannes_2017_2.jpg",
+        "id": 105
+    },
+    {
+        "name": "Jennifer Aniston",
+        "origin": "Sherman Oaks, California, U.S.",
+        "profession": "Actress, Producer",
+        "bio": "Jennifer Aniston is a popular actress and producer who rose to fame for her role as Rachel Green in the hit TV series Friends. She has won a Primetime Emmy Award, a Golden Globe Award, and a Screen Actors Guild Award for her work. Aniston is also known for her roles in films such as Marley & Me, The Break-Up, and Dumplin'.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Jennifer_Aniston_2019_by_Glenn_Francis.jpg",
+        "id": 106
+    },
+    {
+        "name": "Scarlett Johansson",
+        "origin": "New York City, New York, U.S.",
+        "profession": "Actress",
+        "bio": "Scarlett Ingrid Johansson is an American actress and singer. She is the world's highest-paid actress, has a star on the Hollywood Walk of Fame, has made multiple appearances in the Forbes Celebrity 100, and is the recipient of several awards, including a Tony Award and a BAFTA Award. Johansson began her acting career in the Off-Broadway play ‘Sophistry’ in 1993 and made her film debut in the fantasy comedy ‘North’ in 1994. She is best known for her roles in films such as ‘Lost in Translation’, ‘The Avengers’ series, ‘Her’, ‘Marriage Story’ and ‘Jojo Rabbit’.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Scarlett_Johansson_by_Gage_Skidmore_2_%28cropped%29.jpg/220px-Scarlett_Johansson_by_Gage_Skidmore_2_%28cropped%29.jpg",
+        "id": 107
+    },
+    {
+        "name": "Emma Stone",
+        "origin": "Scottsdale, Arizona, U.S.",
+        "profession": "Actress",
+        "bio": "Emily Jean 'Emma' Stone is an American actress. She is the recipient of numerous accolades, including an Academy Award and a Golden Globe Award. Stone began acting as a child as a member of the Valley Youth Theatre in Phoenix, Arizona, where she made her stage debut in a production of ‘The Wind in the Willows’. She gained wider recognition for her roles in the teen comedy ‘Easy A’, the drama ‘The Help’ and the musical comedy-drama ‘La La Land’.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Emma_Stone_at_the_39th_Mill_Valley_Film_Festival_%28cropped%29.jpg/220px-Emma_Stone_at_the_39th_Mill_Valley_Film_Festival_%28cropped%29.jpg",
+        "id": 108
+    },
+    {
+        "name": "Viola Davis",
+        "origin": "St. Matthews, South Carolina, U.S.",
+        "profession": "Actress",
+        "bio": "Viola Davis is an American actress and producer. She is the first African-American to achieve the 'Triple Crown of Acting', having won an Academy Award, Emmy Award, and Tony Award. Davis began her acting career on stage, winning the Tony Award for Best Featured Actress in a Play for her role in ‘King Hedley II’. She has since appeared in several films, including ‘Doubt’, ‘The Help’, and ‘Fences’, and television shows, such as ‘How to Get Away with Murder’.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Viola_Davis_at_the_81st_Academy_Awards_cropped.jpg/220px-Viola_Davis_at_the_81st_Academy_Awards_cropped.jpg",
+        "id": 109
+    },
+    {
+        "name": "Natalie Portman",
+        "origin": "Jerusalem, Israel",
+        "profession": "Actress, filmmaker",
+        "bio": "Natalie Portman is an Israeli-American actress and filmmaker. She began acting at the age of 12 and gained international recognition for her role as Padmé Amidala in the Star Wars prequel trilogy. Portman has also appeared in numerous other films, including Black Swan, V for Vendetta, and Jackie, for which she received an Academy Award nomination. In addition to her acting career, Portman has also directed and produced films, including A Tale of Love and Darkness. She is also a Harvard University graduate, having earned a degree in psychology.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Natalie_Portman_%28Berlinale_2020%29_%28cropped%29.jpg/220px-Natalie_Portman_%28Berlinale_2020%29_%28cropped%29.jpg",
+        "id": 110
+    },
+    {
+        "name": "Jennifer Lawrence",
+        "origin": "Indian Hills, Kentucky, U.S.",
+        "profession": "Actress",
+        "bio": "Jennifer Lawrence is an American actress known for her roles in several blockbuster films, including the Hunger Games series, Silver Linings Playbook, and American Hustle. She was born on August 15, 1990, in Indian Hills, Kentucky, and began acting at a young age, making her debut in the television series Monk at the age of 16. She gained critical acclaim for her performance in the indie drama Winter's Bone in 2010, and her career skyrocketed from there. Lawrence has been nominated for four Academy Awards and has won one, for her role in Silver Linings Playbook.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Jennifer_Lawrence_SDCC_2015_X-Men.jpg/220px-Jennifer_Lawrence_SDCC_2015_X-Men.jpg",
+        "id": 111
     }
 ]
