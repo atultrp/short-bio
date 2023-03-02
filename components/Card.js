@@ -43,7 +43,7 @@ const Card = ({ data, customClasses }) => {
 
       {/* Bottom part */}
       <div className="flex justify-between items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full">
-        <a onClick={() => handleReadMoreClick(data?.id)} className="text-blue-500 inline-flex items-center cursor-pointer text-sm md:text-base hover:scale-125 ease-in-out duration-200">Read More
+        <a onClick={() => handleReadMoreClick(data?.id)} className="text-blue-500 inline-flex items-center cursor-pointer text-sm md:text-base hover:scale-110 ease-in-out duration-200">Read More
           <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5 12h14"></path>
             <path d="M12 5l7 7-7 7"></path>
