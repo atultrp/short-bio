@@ -18,28 +18,63 @@ const fullBio = () => {
   const [shareUrl, setShareUrl] = useState("")
   const router = useRouter();
   const id = router.query.id
-  const [randomIndexArray, setRandomIndexArray] = useState()
+  const [recommendedBio, setRecommendedBio] = useState()
 
   useEffect(() => {
     if (id) {
-      let tempData = data.filter((item) => item.id === parseInt(id))
-      setBioData(tempData[0])
-      setBriefBioContent(tempData[0]?.briefBio.split("\n\n"))
-      setShareUrl(window.location.href)
-      if (!randomIndex().includes(parseInt(id))) {
-        setRandomIndexArray(randomIndex())
+      // Recommended Bio
+      let currentBio = data.filter((item) => item.id === parseInt(id))
+      let currentBioProfession = currentBio[0]?.profession.toLowerCase().split(", ")
+      let tempData = data.filter((item) => item.id !== parseInt(id))
+      let rcmdData = tempData?.filter((item) => {
+        let itemProfession = item.profession.toLowerCase().split(", ")
+        for (let i of itemProfession) {
+          if (currentBioProfession.includes(i)) {
+            return item
+          }
+        }
+      })
+
+      // All data other than Recommended Bio and Current Bio
+      let tempOtherData = tempData.filter((item) => {
+        if (!rcmdData.includes(item)) {
+          return item
+        }
+      })
+
+      // Setting Recommended Bio
+      if (rcmdData.length >= 3) {
+        setRecommendedBio(rcmdData.slice(0, 3))
       }
+      else if (rcmdData.length === 2) {
+        let finalRcmdData = [...rcmdData, tempOtherData[randomIndexId(tempOtherData)[0]]]
+        setRecommendedBio(finalRcmdData)
+      }
+      else if (rcmdData.length === 1) {
+        let finalRcmdData = [...rcmdData, tempOtherData[randomIndexId(tempOtherData)[0]], tempOtherData[randomIndexId(tempOtherData)[1]]]
+        setRecommendedBio(finalRcmdData)
+      }
+      else {
+        let finalRcmdData = [tempOtherData[randomIndexId(tempOtherData)[0]], tempOtherData[randomIndexId(tempOtherData)[1]], tempOtherData[randomIndexId(tempOtherData)[2]]]
+        setRecommendedBio(finalRcmdData)
+      }
+
+      // Current Bio Data and Share Url
+      setBioData(currentBio[0])
+      setBriefBioContent(currentBio[0]?.briefBio.split("\n\n"))
+      setShareUrl(window.location.href)
     }
+
   }, [id])
 
-  console.log("randomIndexArray", randomIndexArray)
 
-  const randomIndex = () => {
-    let randomIndex1 = Math.floor(Math.random() * (data.length + 1))
-    let randomIndex2 = Math.floor(Math.random() * (data.length + 1))
-    let randomIndex3 = Math.floor(Math.random() * (data.length + 1))
+  // Finding 3 random index
+  const randomIndexId = (otherData) => {
+    let randomIndex1 = Math.floor(Math.random() * (otherData.length + 1))
+    let randomIndex2 = Math.floor(Math.random() * (otherData.length + 1))
+    let randomIndex3 = Math.floor(Math.random() * (otherData.length + 1))
     if (randomIndex1 === randomIndex2 || randomIndex1 === randomIndex3 || randomIndex2 === randomIndex3) {
-      randomIndex()
+      randomIndexId(otherData)
     }
     return [randomIndex1, randomIndex2, randomIndex3]
   }
@@ -105,13 +140,11 @@ const fullBio = () => {
         <h2 className="custom-font uppercase text-2xl md:text-4xl font-semibold bg-gradient-to-t from-rose-500 to-pink-400 text-transparent bg-clip-text">Some Other Famous Personalities</h2>
 
         <div className='my-4 flex flex-wrap'>
-          {randomIndexArray && data.map((item, index) => {
-            if (item?.id === randomIndexArray[0] || item?.id === randomIndexArray[1]) {
-              return <Card key={index} data={item} />
-            }
-            if (item?.id === randomIndexArray[2]) {
+          {recommendedBio && recommendedBio.map((item, index) => {
+            if (index === 2) {
               return <Card key={index} data={item} customClasses="hidden 2xl:block" />
             }
+            return <Card key={index} data={item} />
           })}
         </div>
         <div className="cursor-pointer w-fit mx-auto my-3 md:my-6">
