@@ -22,7 +22,6 @@ export default function Home() {
     const response = await axios.get("https://type.fit/api/quotes")
     let randomIndex = Math.floor(Math.random() * (response.data.length + 1))
     setQuoteData(response.data[randomIndex])
-    console.log(response.data[randomIndex], randomIndex, "respise")
   }
   useEffect(() => {
     fetchRandomQuotes()

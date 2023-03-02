@@ -22,10 +22,6 @@ const customizeData = () => {
       else {
         otherData.push(item)
       }
-      console.log("businessData", businessData)
-      console.log("politicalData", politicalData)
-      console.log("sportsData", sportsData)
-      console.log("otherData", otherData)
 
       tempData = [...businessData, ...politicalData, ...sportsData, ...otherData]
 
@@ -40,8 +36,6 @@ const customizeData = () => {
         item.id = uniqueId
         uniqueId++
       })
-
-      console.log("tempData", tempData)
 
     })
   }, [data])
