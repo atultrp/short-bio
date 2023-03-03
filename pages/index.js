@@ -3,10 +3,10 @@ import axios from 'axios'
 import Head from 'next/head'
 import { useEffect, useRef, useState } from 'react'
 import data from '../data/bioData.json'
-import Link from 'next/link'
-import { BiNotepad } from 'react-icons/bi'
+import { BiNotepad, BiUpArrowAlt } from 'react-icons/bi'
 import useOnClickOutside from '@/hooks/useOnClickOutside'
 import SkeletonCard from '@/components/SkeletonCard'
+import { BsChevronDoubleDown } from 'react-icons/bs'
 
 export default function Home() {
   const [quoteData, setQuoteData] = useState([])
@@ -14,19 +14,23 @@ export default function Home() {
   const [filterVal, setFilterVal] = useState()
   const [openOptions, setOpenOptions] = useState(false)
   const [showSkeleton, setShowSkeleton] = useState(true)
-
+  const [contentIndex, setContentIndex] = useState(12)
+  const [showScroll, setShowScroll] = useState(false)
   let options = ["Name", "Profession", "Origin"]
   const popUpRef = useRef();
 
+  // Fetch Random Quotes
   const fetchRandomQuotes = async () => {
     const response = await axios.get("https://type.fit/api/quotes")
     let randomIndex = Math.floor(Math.random() * (response.data.length + 1))
     setQuoteData(response.data[randomIndex])
   }
+
   useEffect(() => {
     fetchRandomQuotes()
   }, []);
 
+  // Handle Search Input and Filter
   const handleSearch = (query) => {
     let tempData = data.filter((item) => {
       if (!filterVal) {
@@ -39,22 +43,38 @@ export default function Home() {
     setBioData(tempData)
   }
 
+  // Handle Click Outside
   useOnClickOutside(popUpRef, () => {
     setOpenOptions(false)
   });
 
+  // Storing data in state
   useEffect(() => {
     if (data) {
       setBioData(data)
     }
   }, [data])
 
+  // Skeleton
   useEffect(() => {
     setTimeout(() => {
       setShowSkeleton(false)
     }, 1500)
   }, [])
 
+  // Scroll To Top
+  const checkScrollTop = () => {
+    if (!showScroll && window.pageYOffset > 400) {
+      setShowScroll(true)
+    } else if (showScroll && window.pageYOffset <= 400) {
+      setShowScroll(false)
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', checkScrollTop)
+    return () => window.removeEventListener('scroll', checkScrollTop)
+  }, [showScroll])
 
 
   return (
@@ -66,8 +86,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-
-      <div className="mt-3 md:mt-6 mx-6 lg:mx-16">
+      <div className="my-3 md:my-6 mx-6 lg:mx-16 scroll-smooth">
 
         <div className='lg:flex flex-row-reverse items-center lg:gap-x-7'>
           <img src="/elonMusk.png" alt="poster" className='w-80 h-80 md:w-96 md:h-96 xl:w-[450px] xl:h-[450px] flex-shrink-0 object-cover object-center rounded-full mx-auto' />
@@ -175,13 +194,39 @@ export default function Home() {
               <SkeletonCard />
             </div>
             : <div className='my-4 flex flex-wrap'>
-              {bioData?.length !== 0 ? bioData?.map((item, index) => {
+              {bioData?.length !== 0 ? bioData.slice(0, contentIndex)?.map((item, index) => {
                 return <Card key={index} data={item} />
               })
                 : <div className='w-full flex justify-center items-center my-6'>
                   <img src="/No_data.gif" className='w-96' />
                 </div>}
             </div>}
+
+          {bioData.length >= contentIndex && <div className="cursor-pointer w-fit mx-auto my-3 md:my-6">
+            <div
+              className='text-rose-400 flex items-center space-x-1 hover:scale-110 duration-300 hover:underline hover:underline-offset-8'
+              onClick={() => {
+                setContentIndex(contentIndex + 12)
+              }}
+            >
+              <span className='font-semibold'>
+                View More
+              </span>
+              <BsChevronDoubleDown className='text-xl' />
+            </div>
+          </div>}
+
+          {showScroll && <div
+            className='fixed bottom-4 right-4 sm:bottom-5 sm:right-5 text-3xl sm:text-4xl cursor-pointer hover:scale-125 scroll-smooth ease-in-out duration-200 text-white bg-gradient-to-tr from-teal-400 via-violet-500 to-teal-400 hover:shadow-md rounded-full'
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+              });
+            }}
+          >
+            <BiUpArrowAlt />
+          </div>}
         </div>
       </div>
 
