@@ -10,6 +10,7 @@ import data from '../data/bioData.json'
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Card from '@/components/Card';
+import { shuffleArray } from '@/utils/utils';
 
 const fullBio = () => {
 
@@ -68,16 +69,6 @@ const fullBio = () => {
     }
 
   }, [id])
-
-  // Shuffle the array
-  const shuffleArray = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array
-  }
-
 
   // Finding 3 random index
   const randomIndexId = (otherData) => {
