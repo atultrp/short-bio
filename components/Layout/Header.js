@@ -35,14 +35,14 @@ const Header = () => {
       </nav>
 
       {/* Mobile */}
-      <nav className="md:hidden py-3 px-4 shadow-md sticky top-0 z-50 items-center bg-white">
+      <nav className="md:hidden py-3 px-4 shadow-md sticky top-0 z-50 items-center bg-white" ref={popUpRef}>
         <div className=" flex justify-between items-center">
           <Link href={"/"} >
             <h1 className="text-2xl font-bold uppercase cursor-pointer items-center custom-font tracking-widest text-transparent bg-clip-text bg-gradient-to-tr from-green-300 via-blue-500 to-green-300">Short Bio</h1>
           </Link>
           <HiMenuAlt1 className="text-4xl text-rose-500" onClick={() => setModal(!modal)} />
         </div>
-        <ul className={`${!modal && 'hidden'} absolute right-2 px-4 py-4 shadow-md rounded bg-white font-semibold`} ref={popUpRef}>
+        <ul className={`${!modal && 'hidden'} absolute right-2 px-4 py-4 shadow-md rounded bg-white font-semibold`}>
           <Link href={"/"} >
             <li className={`${router.pathname === "/" ? "opacity-100 text-rose-500 cursor-pointer" : "opacity-70 hover:text-rose-500 hover:scale-110 ease-in-out duration-200 cursor-pointer"}`}>Home</li>
           </Link>

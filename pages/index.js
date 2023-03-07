@@ -152,7 +152,7 @@ export default function Home() {
 
             <div className='flex justify-end'>
               {/* Filter dropdown */}
-              <div className="relative inline-block text-left">
+              <div className="relative inline-block text-left" ref={popUpRef}>
                 <div>
                   <button type="button" className="inline-flex justify-center w-full rounded-md border border-gray-200 shadow-sm px-4 py-3 bg-white text-sm font-medium text-gray-700 focus:outline-none 
                   hover:shadow-[0px_0px_10px_0px_#00000024] ease-in-out transition-shadow
@@ -167,10 +167,10 @@ export default function Home() {
                 </div>
 
                 {/* Dropdown */}
-                <div className={`origin-top-right absolute right-0 mt-2 w-28 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none ${openOptions ? 'block' : 'hidden'}`} ref={popUpRef}>
-                  <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                <div className={`overflow-hidden origin-top-right absolute right-0 mt-2 w-28 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none ${openOptions ? 'block' : 'hidden'}`}>
+                  <div className="" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                     {options.map((item, index) => {
-                      return <button type="button" className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem" onClick={() => {
+                      return <button type="button" className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:text-white hover:duration-150 hover:bg-gradient-to-t hover:from-rose-500 hover:to-pink-400" role="menuitem" onClick={() => {
                         setFilterVal(item)
                         setOpenOptions(false)
                       }}>
@@ -188,6 +188,8 @@ export default function Home() {
           {/* Cards */}
           {showSkeleton ?
             <div className='my-4 flex flex-wrap'>
+              <SkeletonCard />
+              <SkeletonCard />
               <SkeletonCard />
               <SkeletonCard />
               <SkeletonCard />
