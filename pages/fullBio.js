@@ -44,9 +44,11 @@ const fullBio = () => {
 
       // Setting Recommended Bio
       if (rcmdData.length >= 3) {
+        rcmdData = shuffleArray(rcmdData)
         setRecommendedBio(rcmdData.slice(0, 3))
       }
       else if (rcmdData.length === 2) {
+        rcmdData = shuffleArray(rcmdData)
         let finalRcmdData = [...rcmdData, tempOtherData[randomIndexId(tempOtherData)[0]]]
         setRecommendedBio(finalRcmdData)
       }
@@ -66,6 +68,15 @@ const fullBio = () => {
     }
 
   }, [id])
+
+  // Shuffle the array
+  const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array
+  }
 
 
   // Finding 3 random index
