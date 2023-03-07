@@ -51,7 +51,8 @@ export default function Home() {
   // Storing data in state
   useEffect(() => {
     if (data) {
-      setBioData(data)
+      let tempData = shuffleArray(data)
+      setBioData(tempData)
     }
   }, [data])
 
@@ -75,6 +76,15 @@ export default function Home() {
     window.addEventListener('scroll', checkScrollTop)
     return () => window.removeEventListener('scroll', checkScrollTop)
   }, [showScroll])
+
+  // Shuffle the array
+  const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array
+  }
 
 
   return (
