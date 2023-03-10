@@ -10,7 +10,7 @@ import data from '../data/bioData.json'
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Card from '@/components/Card';
-import { shuffleArray } from '@/utils/utils';
+import { randomIndexId, shuffleArray } from '@/utils/utils';
 
 const fullBio = () => {
 
@@ -20,6 +20,7 @@ const fullBio = () => {
   const router = useRouter();
   const id = router.query.id
   const [recommendedBio, setRecommendedBio] = useState()
+  const [funfacts, setFunfacts] = useState()
 
   useEffect(() => {
     if (id) {
@@ -64,22 +65,21 @@ const fullBio = () => {
 
       // Current Bio Data and Share Url
       setBioData(currentBio[0])
-      setBriefBioContent(currentBio[0]?.briefBio.split("\n\n"))
+      setBriefBioContent(currentBio[0]?.briefBio?.split("\n\n"))
       setShareUrl(window.location.href)
-    }
 
+      // Fun Facts
+      let tempFunfacts = currentBio[0]?.funfacts?.split("\n")
+      let tempFunfactsArr = []
+
+      for (let i = 1; i < tempFunfacts?.length - 1; i++) {
+        tempFunfactsArr.push(tempFunfacts[i]?.replace(/[",]+/g, ""))
+      }
+      setFunfacts(tempFunfactsArr)
+    }
   }, [id])
 
-  // Finding 3 random index
-  const randomIndexId = (otherData) => {
-    let randomIndex1 = Math.floor(Math.random() * (otherData.length + 1))
-    let randomIndex2 = Math.floor(Math.random() * (otherData.length + 1))
-    let randomIndex3 = Math.floor(Math.random() * (otherData.length + 1))
-    if (randomIndex1 === randomIndex2 || randomIndex1 === randomIndex3 || randomIndex2 === randomIndex3) {
-      randomIndexId(otherData)
-    }
-    return [randomIndex1, randomIndex2, randomIndex3]
-  }
+  console.log(bioData?.funfacts)
 
   return (
     <>
@@ -126,6 +126,19 @@ const fullBio = () => {
           })}
         </div>
 
+        {funfacts?.length !== 0 && <div className='mb-8 sm:px-7 mt-3 sm:mt-6'>
+          <h2 className="custom-font uppercase text-xl md:text-2xl font-semibold bg-gradient-to-t from-rose-500 to-pink-400 text-transparent bg-clip-text">Fun Facts</h2>
+          <ul style={{ listStyle: "disc" }} className="ml-4 mt-2">
+            {funfacts?.map((item, index) => {
+              return (
+                <li className="leading-relaxed mb-1" key={index} >
+                  {item}
+                </li>
+              )
+            })}
+          </ul>
+        </div>}
+
         <div className="cursor-pointer w-fit mx-auto my-6 md:my-12">
           <Link href={"/"}>
             <div className='text-rose-400 flex items-center space-x-1 hover:scale-110 duration-300 hover:underline hover:underline-offset-8'>
@@ -139,8 +152,7 @@ const fullBio = () => {
       </div>
 
       <div className='mt-3 md:mt-6 mx-6 lg:mx-16'>
-        <h2 className="custom-font uppercase text-2xl md:text-4xl font-semibold bg-gradient-to-t from-rose-500 to-pink-400 text-transparent bg-clip-text">Some Other Famous Personalities</h2>
-
+        <h2 className="custom-font uppercase text-2xl md:text-4xl font-semibold bg-gradient-to-t from-rose-500 to-pink-400 text-transparent bg-clip-text">Recommended Bio</h2>
         <div className='my-4 flex flex-wrap'>
           {recommendedBio && recommendedBio.map((item, index) => {
             if (index === 2) {
