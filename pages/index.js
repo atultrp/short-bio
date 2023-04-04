@@ -186,6 +186,13 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Results found */}
+          <div className='flex justify-between items-center'>
+            <p className='text-2xl font-bold custom-font bg-gradient-to-t from-rose-500 to-pink-400 text-transparent bg-clip-text uppercase'>
+              {bioData?.length} {bioData?.length == 1 ? "Personality" : "Personalities"} Found...
+            </p>
+          </div>
+
 
           {/* Cards */}
           {showSkeleton ?
